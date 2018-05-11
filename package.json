@@ -1,0 +1,19 @@
+{
+  "scripts": {
+    "dev":"nodemon server.js"
+  },
+  "name": "reja3liapi",
+  "version": "0.0.1",
+  "description": "a nodejs api for reja3li app",
+  "main": "server.js",
+  "author": "Salim Mahboubi",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3",
+    "mongodb": "2.2.16"
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.4"
+  }
+}
