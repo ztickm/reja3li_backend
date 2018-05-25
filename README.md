@@ -1,4 +1,7 @@
 # Reja3li Backend
+
+[![Join the chat at https://gitter.im/reja3li_backend/Lobby](https://badges.gitter.im/reja3li_backend/Lobby.svg)](https://gitter.im/reja3li_backend/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 Backend for Reja3li, an app to help you remember to whom you lent your stuff.
 ## Getting Started
 
