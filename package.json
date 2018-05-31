@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "dev":"nodemon server.js"
+    "dev": "nodemon server.js"
   },
   "name": "reja3liapi",
   "version": "0.0.1",
@@ -11,7 +11,9 @@
   "dependencies": {
     "body-parser": "^1.18.2",
     "express": "^4.16.3",
-    "mongodb": "2.2.16"
+    "jsonwebtoken": "^8.2.2",
+    "mongodb": "2.2.16",
+    "morgan": "^1.9.0"
   },
   "devDependencies": {
     "nodemon": "^1.17.4"
