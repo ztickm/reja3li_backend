@@ -1,6 +1,9 @@
 #db config file
 config/db.js
 
+#config file
+config/config.js
+
 # Logs
 logs
 *.log
