@@ -23,11 +23,11 @@ or
 ```console
 npm run dev
 ```
-You will then be able to send HTTP requests at [localhost:6969](localhost:6969) using an HTTP client.  
+You will then be able to send HTTP requests at [localhost:6969](http://localhost:6969) using an HTTP client.  
 If `6969` doesn't suit you as a port number you can edit it in `server.js`  
 #### HTTP Clients
 ##### Insomnia
-If you're using [Insomnia](htttps://www.insomnia.rest/) as your HTTP client, you can find an [export file](blob/master/Insomnia_HTTP_Requests.json) for the workspace containing the requests, so you don't have to write them all again.  
+If you're using [Insomnia](htttps://www.insomnia.rest/) as your HTTP client, you can find an [export file](/Insomnia_HTTP_Requests.json) for the workspace containing the requests, so you don't have to write them all again.  
 After importing the workspace, please read the description [Shift+ Ctrl + ,] for further instructions.
 ##### Other HTTP Clients
 _No guides available yet. If you can add a short guide and/or export files please submit a pull request._
