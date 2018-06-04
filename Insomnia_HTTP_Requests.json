@@ -1,0 +1,304 @@
+{
+	"_type": "export",
+	"__export_format": 3,
+	"__export_date": "2018-06-04T03:41:20.263Z",
+	"__export_source": "insomnia.desktop.app:v5.16.2",
+	"resources": [
+		{
+			"_id": "wrk_c2e0224e0f734a8ca66f8da0aa508668",
+			"created": 1525957611997,
+			"description": "Reja3li is an app to help you remember to whom you lent your stuff.  \nHere you will find requests ready to use with the server.  \n### Important:\nIf you're not using the default `localhost` url and `6969` port, be sure to modify the corresponding attributes in the reja3li_env subenvironnement (specific to Insomnia)  \nBe sure to modify the item IDs to match items that exist in your db instance.  \n### Help\nIf you're having trouble with anything please contact us on: [gitter](https://gitter.im/reja3li_backend/Lobby)",
+			"modified": 1528083637374,
+			"name": "Reja3li_Backend",
+			"parentId": null,
+			"_type": "workspace"
+		},
+		{
+			"_id": "env_30cdb9e28fb346bfbc6262be35bd60a8",
+			"color": null,
+			"created": 1525957612061,
+			"data": {},
+			"isPrivate": false,
+			"modified": 1525957612061,
+			"name": "New Environment",
+			"parentId": "wrk_c2e0224e0f734a8ca66f8da0aa508668",
+			"_type": "environment"
+		},
+		{
+			"_id": "jar_04d0c5c8438a4af58dd5415558ad2686",
+			"cookies": [],
+			"created": 1525957612206,
+			"modified": 1525957612206,
+			"name": "Default Jar",
+			"parentId": "wrk_c2e0224e0f734a8ca66f8da0aa508668",
+			"_type": "cookie_jar"
+		},
+		{
+			"_id": "req_c2a64f03e1c9405394927566e5c5711b",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/x-www-form-urlencoded",
+				"params": [
+					{
+						"id": "pair_cabc3be5d2754a1092be6df18e1df717",
+						"name": "owner_id",
+						"value": "04"
+					},
+					{
+						"disabled": false,
+						"id": "pair_6c6b478f0bd8449cb3ad4076a8e99b87",
+						"name": "updated_at",
+						"value": "{% now 'unix', '' %}"
+					},
+					{
+						"id": "pair_748b9c7c02484c3cbcfdbe597fcde18c",
+						"name": "name",
+						"value": "namee"
+					},
+					{
+						"id": "pair_d23ec2d3e30a428f8d0616ac22e6d8c6",
+						"name": "description",
+						"value": "descee"
+					},
+					{
+						"id": "pair_c65bc3b09ae646d48344248ae80dfa75",
+						"name": "type",
+						"value": "book"
+					},
+					{
+						"id": "pair_6dc23d445113444887f5e782a90028a2",
+						"name": "amount",
+						"value": "1"
+					},
+					{
+						"id": "pair_a439940a82c44bb58588cbe25a35bbb2",
+						"name": "created_at",
+						"value": "{% now 'unix', '' %}"
+					},
+					{
+						"id": "pair_92f3fd5502244b559941e9b66eabcf11",
+						"name": "photo_URL",
+						"value": "http://placehold.jp/150x150.png"
+					},
+					{
+						"id": "pair_7a9b8ec4e76b431a84b4c42b3d317829",
+						"name": "lent_to_id",
+						"value": "65"
+					},
+					{
+						"id": "pair_c352c02691cf457b8a6c2919fe18b1c0",
+						"name": "borrowed_from_id",
+						"value": "4"
+					}
+				]
+			},
+			"created": 1525957678756,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_920107fcfb4947a597f1d18f003303e5",
+					"name": "Content-Type",
+					"value": "application/x-www-form-urlencoded"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1526622646169,
+			"method": "PUT",
+			"modified": 1528083235626,
+			"name": "Update Item  ",
+			"parameters": [],
+			"parentId": "wrk_c2e0224e0f734a8ca66f8da0aa508668",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{ server_url  }}:{{ port  }}/items/5b0741dcf2a053146c571f5e",
+			"_type": "request"
+		},
+		{
+			"_id": "req_5db294b4eed6469ca7b62405f14bc249",
+			"authentication": {},
+			"body": {},
+			"created": 1527287613582,
+			"description": "",
+			"headers": [],
+			"isPrivate": false,
+			"metaSortKey": -1528080834861,
+			"method": "GET",
+			"modified": 1528083273853,
+			"name": "Get Item",
+			"parameters": [],
+			"parentId": "wrk_c2e0224e0f734a8ca66f8da0aa508668",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{ server_url  }}:{{ port  }}/items/5b0741dcf2a053146c571f5e",
+			"_type": "request"
+		},
+		{
+			"_id": "req_5339b7ba47f14907addd0b5c749955c9",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/x-www-form-urlencoded",
+				"params": [
+					{
+						"disabled": false,
+						"id": "pair_6c6b478f0bd8449cb3ad4076a8e99b87",
+						"name": "updated_at",
+						"value": "{% now 'unix', '' %}"
+					},
+					{
+						"id": "pair_92f3fd5502244b559941e9b66eabcf11",
+						"name": "photo_URL",
+						"value": "http://placehold.jp/300x300.png"
+					}
+				]
+			},
+			"created": 1527287667065,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_920107fcfb4947a597f1d18f003303e5",
+					"name": "Content-Type",
+					"value": "application/x-www-form-urlencoded"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1526622646119,
+			"method": "PUT",
+			"modified": 1528083246135,
+			"name": "Update some fields of an Item",
+			"parameters": [],
+			"parentId": "wrk_c2e0224e0f734a8ca66f8da0aa508668",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{ server_url  }}:{{ port  }}/items/5b074354f777f615180b060f",
+			"_type": "request"
+		},
+		{
+			"_id": "req_5ff386ac7e3b4f9087aa1f68ec3fd236",
+			"authentication": {},
+			"body": {},
+			"created": 1528080834836,
+			"description": "",
+			"headers": [],
+			"isPrivate": false,
+			"metaSortKey": -1528080834836,
+			"method": "DELETE",
+			"modified": 1528083258304,
+			"name": "Delete Item",
+			"parameters": [],
+			"parentId": "wrk_c2e0224e0f734a8ca66f8da0aa508668",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{ server_url  }}:{{ port  }}/items/5b0741dcf2a053146c571f5e",
+			"_type": "request"
+		},
+		{
+			"_id": "req_ad89ef9fd73340ac90c850826f85bfdd",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/x-www-form-urlencoded",
+				"params": [
+					{
+						"id": "pair_cabc3be5d2754a1092be6df18e1df717",
+						"name": "owner_id",
+						"value": "04"
+					},
+					{
+						"disabled": false,
+						"id": "pair_6c6b478f0bd8449cb3ad4076a8e99b87",
+						"name": "updated_at",
+						"value": "{% now 'unix', '' %}"
+					},
+					{
+						"id": "pair_748b9c7c02484c3cbcfdbe597fcde18c",
+						"name": "name",
+						"value": "namee"
+					},
+					{
+						"id": "pair_d23ec2d3e30a428f8d0616ac22e6d8c6",
+						"name": "description",
+						"value": "descee"
+					},
+					{
+						"id": "pair_c65bc3b09ae646d48344248ae80dfa75",
+						"name": "type",
+						"value": "book"
+					},
+					{
+						"id": "pair_6dc23d445113444887f5e782a90028a2",
+						"name": "amount",
+						"value": "1"
+					},
+					{
+						"id": "pair_a439940a82c44bb58588cbe25a35bbb2",
+						"name": "created_at",
+						"value": "{% now 'unix', '' %}"
+					},
+					{
+						"id": "pair_92f3fd5502244b559941e9b66eabcf11",
+						"name": "photo_URL",
+						"value": "http://placehold.jp/150x150.png"
+					},
+					{
+						"id": "pair_7a9b8ec4e76b431a84b4c42b3d317829",
+						"name": "lent_to_id",
+						"value": "65"
+					},
+					{
+						"id": "pair_c352c02691cf457b8a6c2919fe18b1c0",
+						"name": "borrowed_from_id",
+						"value": "4"
+					}
+				]
+			},
+			"created": 1528083016076,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_920107fcfb4947a597f1d18f003303e5",
+					"name": "Content-Type",
+					"value": "application/x-www-form-urlencoded"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1528080834886,
+			"method": "POST",
+			"modified": 1528083217823,
+			"name": "Create Item",
+			"parameters": [],
+			"parentId": "wrk_c2e0224e0f734a8ca66f8da0aa508668",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{ server_url  }}:{{ port  }}/items/5b0741dcf2a053146c571f5e",
+			"_type": "request"
+		},
+		{
+			"_id": "env_7cd496fe9c7c4049ab85bcb8903b01ed",
+			"color": "#890089",
+			"created": 1528081702865,
+			"data": {
+				"port": "6969",
+				"server_url": "localhost"
+			},
+			"isPrivate": false,
+			"modified": 1528083535222,
+			"name": "reja3li_env",
+			"parentId": "env_30cdb9e28fb346bfbc6262be35bd60a8",
+			"_type": "environment"
+		}
+	]
+}

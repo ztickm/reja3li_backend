@@ -8,21 +8,29 @@ Backend for Reja3li, an app to help you remember to whom you lent your stuff.
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 ### Setup
 After cloning this repo on your local machine you will have to install the dependencies, you can do it using yarn or npm on your terminal:
-```bash
+```console
 yarn install
 ```
-```bash
+or
+```console
 npm install
 ```
 After that you should be able to startup the dev server using either
-```bash
+```console
 yarn dev
 ``` 
 or
-```bash
+```console
 npm run dev
 ```
-You will then be able to send HTTP requests at localhost:6969. If 6969 doesn't suit you as a port number you can edit it in `server.js`
+You will then be able to send HTTP requests at [localhost:6969](localhost:6969) using an HTTP client.  
+If `6969` doesn't suit you as a port number you can edit it in `server.js`  
+#### HTTP Clients
+##### Insomnia
+If you're using [Insomnia](htttps://www.insomnia.rest/) as your HTTP client, you can find an [export file](blob/master/Insomnia_HTTP_Requests.json) for the workspace containing the requests, so you don't have to write them all again.  
+After importing the workspace, please read the description [Shift+ Ctrl + ,] for further instructions.
+##### Other HTTP Clients
+_No guides available yet. If you can add a short guide and/or export files please submit a pull request._
 
 ## Built With
 * [NodeJS](https://nodejs.org/)
