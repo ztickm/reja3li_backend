@@ -16,7 +16,7 @@ module.exports = function (app, db) {
             borrowed_from_id: req.body.borrowed_from_id
         }
         db.collection('elements').insert(item, (err, result) => {
-            if (err) res.send({ 'error': 'an errors has occured' + err })
+            if (err) res.send({ 'error': 'an error has occured' + err })
             else res.send(result.ops[0])
 
         })
@@ -26,7 +26,7 @@ module.exports = function (app, db) {
         const id = req.params.id;
         const details = { '_id': new ObjectID(id) };
         db.collection('elements').findOne(details, (err, item) => {
-            if (err) res.send({ 'error': 'an errors has occured' + err });
+            if (err) res.send({ 'error': 'an error has occured' + err });
             else res.send(item);
         })
     })
@@ -50,7 +50,7 @@ module.exports = function (app, db) {
         const cleanedItem = removeEmptyProperties(item);
         console.log(cleanedItem);
         db.collection('elements').update(details,{$set: cleanedItem}, (err, result) => {
-            if (err) res.send({ 'error': 'an errors has occured: ' + err });
+            if (err) res.send({ 'error': 'an error has occured: ' + err });
             else res.send(result);
         })
     })
@@ -59,7 +59,7 @@ module.exports = function (app, db) {
         const id = req.params.id;
         const details = { '_id': new ObjectID(id) };
         db.collection('elements').remove(details, (err, item) => {
-            if (err) res.send({ 'error': 'an errors has occured' + err });
+            if (err) res.send({ 'error': 'an error has occured' + err });
             else res.send('item ' + id + ' deleted');
         })
     })
