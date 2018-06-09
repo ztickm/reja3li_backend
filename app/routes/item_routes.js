@@ -1,4 +1,5 @@
 let ObjectID = require('mongodb').ObjectID;
+const objUtils = require('./../../utils/object_utils');
 
 module.exports = function (app, db) {
 
@@ -47,8 +48,8 @@ module.exports = function (app, db) {
             borrowed_from_id: req.body.borrowed_from_id
         }
 
-        const cleanedItem = removeEmptyProperties(item);
-        console.log(cleanedItem);
+        const cleanedItem = objUtils.removeEmptyProperties(user);
+
         db.collection('elements').update(details,{$set: cleanedItem}, (err, result) => {
             if (err) res.send({ 'error': 'an error has occured: ' + err });
             else res.send(result);
@@ -64,16 +65,3 @@ module.exports = function (app, db) {
         })
     })
 };
-
-//TODO: Move this to an Util module or something like that
-//Stolen from stackoverflow
-const removeEmptyProperties = obj =>
-  Object.keys(obj)
-    .filter(k => obj[k] !== null && obj[k] !== undefined) // Remove undef. and null.
-    .reduce(
-      (newObj, k) =>
-        typeof obj[k] === "object"
-          ? Object.assign(newObj, { [k]: removeEmptyProperties(obj[k]) }) // Recurse.
-          : Object.assign(newObj, { [k]: obj[k] }), // Copy value.
-      {}
-    );
