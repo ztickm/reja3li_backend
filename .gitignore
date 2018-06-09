@@ -1,3 +1,7 @@
+#IDEs and Text Editors
+#Please add yours here
+.vscode
+
 #db config file
 config/db.js
 
