@@ -58,7 +58,7 @@ module.exports = function (app, db) {
     app.delete('/items/:id', (req, res) => {
         const id = req.params.id;
         const details = { '_id': new ObjectID(id) };
-        db.collection('elements').remove(details, (err, item) => {
+        db.collection('elements').deleteOne(details, (err, item) => {
             if (err) res.send({ 'error': 'an error has occured' + err });
             else res.send('item ' + id + ' deleted');
         })
