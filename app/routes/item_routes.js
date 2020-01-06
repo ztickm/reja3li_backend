@@ -25,9 +25,12 @@ module.exports = function (app, db) {
 
     app.get('/items/:id', (req, res) => {
         const id = req.params.id;
+        if (!id){
+            return res.status(400).send("id is required")
+        }
         const details = { '_id': new ObjectID(id) };
         db.collection('elements').findOne(details, (err, item) => {
-            if (err) res.send({ 'error': 'an error has occured' + err });
+            if (err || !item) res.status(404).send({ 'error': 'an error has occured' + err });
             else res.send(item);
         })
     })
@@ -58,6 +61,9 @@ module.exports = function (app, db) {
 
     app.delete('/items/:id', (req, res) => {
         const id = req.params.id;
+         if (!id){
+            return res.status(400).send("id is required")
+        }
         const details = { '_id': new ObjectID(id) };
         db.collection('elements').deleteOne(details, (err, item) => {
             if (err) res.send({ 'error': 'an error has occured' + err });
